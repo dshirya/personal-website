@@ -24,21 +24,15 @@
       --main-w: 700px;
       --gap: 2rem;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'IBM Plex Sans', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
-    h1, h2, h3, h4 {
-      font-family: 'WDXL Lubrifont JP N', sans-serif;
-    }
-    /* Sidebar fixed beside centered main */
+    h1, h2, h3, h4 { font-family: 'WDXL Lubrifont JP N', sans-serif; }
+    /* Desktop layout */
     .sidebar {
       position: fixed;
       top: var(--gap);
@@ -54,46 +48,14 @@
       object-fit: cover;
       margin-bottom: 1rem;
     }
-    .sidebar h1 {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-    .sidebar p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .social-links a img {
-      width: var(--icon-size);
-      height: var(--icon-size);
-      transition: opacity .2s;
-    }
-    .social-links a:hover img {
-      opacity: .7;
-    }
-    /* Main content centered */
-    .main {
-      width: var(--main-w);
-      margin: 0 auto;
-      padding: var(--gap);
-    }
-    .main h2 {
-      font-family: 'WDXL Lubrifont JP N', sans-serif;
-      font-size: 1.8rem;
-      color: var(--accent);
-      margin: 1.5rem 0 .8rem;
-    }
-    .divider {
-      height: 2px;
-      background: #ddd;
-      margin: 1rem 0;
-    }
+    .sidebar h1 { font-size: 2rem; color: var(--accent); margin-bottom: .5rem; }
+    .sidebar p { font-size: 1rem; margin-bottom: 1rem; }
+    .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+    .social-links a img { width: var(--icon-size); height: var(--icon-size); transition: opacity .2s; }
+    .social-links a:hover img { opacity: .7; }
+    .main { width: var(--main-w); margin: 0 auto; padding: var(--gap); }
+    .main h2 { font-size: 1.8rem; color: var(--accent); margin: 1.5rem 0 .8rem; }
+    .divider { height: 2px; background: #ddd; margin: 1rem 0; }
     .papers .paper {
       display: flex;
       margin-bottom: 1rem;
@@ -102,36 +64,17 @@
       overflow: hidden;
       background: #fff;
     }
-    .paper img.thumb {
-      width: var(--thumb-size);
-      height: var(--thumb-size);
-      object-fit: cover;
-    }
+    .paper img.thumb { width: var(--thumb-size); height: var(--thumb-size); object-fit: cover; }
     .paper-content {
       padding: .8rem 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    .paper-content a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-      margin-bottom: .3rem;
-    }
-    .paper-content a:hover {
-      text-decoration: underline;
-    }
-    .paper-content p {
-      font-size: .9rem;
-      color: #555;
-    }
-    #cv embed {
-      width: 100%;
-      height: 800px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+    .paper-content a { color: var(--accent); font-weight: 600; text-decoration: none; margin-bottom: .3rem; }
+    .paper-content a:hover { text-decoration: underline; }
+    .paper-content p { font-size: .9rem; color: #555; }
+    #cv embed { width: 100%; height: 800px; border: 1px solid #ccc; border-radius: 4px; }
     #cv .download-btn {
       display: inline-block;
       margin-top: .8rem;
@@ -142,8 +85,11 @@
       text-decoration: none;
       font-weight: 600;
     }
-    #cv .download-btn:hover {
-      background: #004931;
+    #cv .download-btn:hover { background: #004931; }
+    /* Mobile layout */
+    @media (max-width: 768px) {
+      .sidebar { position: static; width: 100%; margin-bottom: var(--gap); }
+      .main { width: 100%; padding: var(--gap) 1rem; }
     }
   </style>
 </head>
@@ -153,41 +99,25 @@
     <h1>Danila Shiryaev</h1>
     <p>PhD Student<br>Institut Polytechnique of Paris</p>
     <div class="social-links">
-      <a href="https://github.com/dshirya" target="_blank">
-        <img src="images/icons/github.png" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/danila-shiryaev-66ab94227/" target="_blank">
-        <img src="images/icons/linkedin.png" alt="LinkedIn">
-      </a>
-      <a href="mailto:dshirya@gmail.com">
-        <img src="images/icons/email.png" alt="Email">
-      </a>
-      <a href="https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en" target="_blank">
-        <img src="images/icons/scholar.png" alt="Google Scholar">
-      </a>
+      <a href="https://github.com/dshirya" target="_blank"><img src="images/icons/github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/danila-shiryaev-66ab94227/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:dshirya@gmail.com"><img src="images/icons/email.png" alt="Email"></a>
+      <a href="https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en" target="_blank"><img src="images/icons/scholar.png" alt="Google Scholar"></a>
     </div>
   </aside>
-
   <main class="main">
-  <section id="about">
-    <h2>About me</h2>
-    <p><strong>Education:</strong> I graduated from Hunter College in December 2024 with a B.A. in Chemistry. Before that, I studied at Moscow State University, where I worked in radiochemistry and materials science labs.</p>
-    <p><strong>Current path:</strong> I’ll start the PhD-Track Program in Advanced Materials at Institut Polytechnique de Paris in Fall 2025.</p>
-    <p><strong>Research passions:</strong> I’m into solid-state chemistry, data analysis, and building predictive models.</p>
-    <p><strong>Outside the lab:</strong> You’ll find me hiking, cooking, or going for a run.</p>
-  </section>
-
+    <section id="about">
+      <h2>About Me</h2>
+      <p><strong>Education:</strong> I graduated from <a href="https://www.chem.msu.ru/eng/" target="_blank">Moscow State University</a> in [Year], then earned my B.A. in Chemistry at <a href="https://hunter.cuny.edu/" target="_blank">Hunter College</a> in December 2024.</p>
+      <p><strong>Current path:</strong> I’ll start the <a href="https://www.ip-paris.fr/en/education/phd-track/phd-track-advanced-materials" target="_blank">PhD-Track Program in Advanced Materials</a> at Institut Polytechnique de Paris in Fall 2025.</p>
+      <p><strong>Research passions:</strong> I’m into solid-state chemistry, data analysis, and building predictive models.</p>
+      <p><strong>Outside the lab:</strong> You’ll find me hiking, cooking, or going for a run.</p>
+    </section>
     <div class="divider"></div>
-
     <section id="research">
       <h2>Research</h2>
-      <p>
-        I started my career as a radiochemist, synthesizing high-oxidation iron compounds for water treatment. Next, I worked with tritium-labeled compounds to study interactions at liquid–liquid interfaces. 
-        Under Dr. Anton Oliynyk, I dove into intermetallics-functional materials that power superconductors and thermoelectrics.
-      </p>
-      <ul style="margin: 1rem 0 1rem 2rem;">
-      
-      </ul>
+      <p>I started my career as a radiochemist, synthesizing high-oxidation iron compounds for water treatment. Next, I worked with tritium-labeled compounds to study interactions at liquid–liquid interfaces. 
+        Under <a href="https://oliynyklab.github.io" target="_blank">Dr. Anton Oliynyk</a>, I dove into intermetallics-functional materials that power superconductors and thermoelectrics.</p>
       <p><strong>Computational approaches I use:</strong></p>
       <ul style="margin: 1rem 0 1rem 2rem;">
         <li>Machine-learning classification to predict and systematize crystal structures</li>
@@ -196,7 +126,6 @@
         <li>High-throughput screening with a custom recommendation engine for novel compositions</li>
         <li>Data analysis to spot trends in crystal structure formation</li>
       </ul>
-
       <p><strong>Experimental methods I employ:</strong></p>
       <ul style="margin: 1rem 0 1rem 2rem;">
         <li>Synthesis by sintering, arc-melting, and metal-flux growth</li>
@@ -206,9 +135,7 @@
         <li>Mechanical testing: compressive strength, hardness, and resonant ultrasound spectroscopy</li>
       </ul>
     </section>
-
     <div class="divider"></div>
-
     <section id="papers">
       <h2>Selected Papers</h2>
       <div class="papers">
@@ -239,12 +166,10 @@
             <a href="https://doi.org/10.1039/D4DD00332B" target="_blank">Composition and Structure Analyzer/Featurizer for Explainable ML Models to Predict Solid State Structures</a>
             <p>Digital Discovery 2025</p>
           </div>
-
+        </div>
       </div>
     </section>
-
     <div class="divider"></div>
-
     <section id="cv">
       <h2>CV</h2>
       <a href="docs/CV.pdf" download class="download-btn">Download CV (PDF)</a>
