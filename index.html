@@ -2,180 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Danila Shiryaev | PhD in Advanced Materials IP Paris</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: 'WDXL Lubrifont JP N';
-      src: local('WDXL Lubrifont JP N');
-      font-weight: normal;
-      font-style: normal;
-    }
-    :root {
-      --accent: #005F3C;
-      --text: #111111;
-      --bg: #ffffff;
-      --sidebar-w: 350px;
-      --profile-size: 180px;
-      --icon-size: 32px;
-      --thumb-size: 150px;
-      --main-w: 700px;
-      --gap: 2rem;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'IBM Plex Sans', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    h1, h2, h3, h4 { font-family: 'WDXL Lubrifont JP N', sans-serif; }
-    /* Desktop layout */
-    .sidebar {
-      position: fixed;
-      top: var(--gap);
-      left: calc(50% - var(--main-w)/2 - var(--gap) - var(--sidebar-w));
-      width: var(--sidebar-w);
-      text-align: center;
-    }
-    .sidebar img.profile {
-      width: var(--profile-size);
-      height: var(--profile-size);
-      border-radius: 50%;
-      border: 4px solid var(--accent);
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-    .sidebar h1 { font-size: 2rem; color: var(--accent); margin-bottom: .5rem; }
-    .sidebar p { font-size: 1rem; margin-bottom: 1rem; }
-    .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
-    .social-links a img { width: var(--icon-size); height: var(--icon-size); transition: opacity .2s; }
-    .social-links a:hover img { opacity: .7; }
-    .main { width: var(--main-w); margin: 0 auto; padding: var(--gap); }
-    .main h2 { font-size: 2rem; color: var(--accent); margin: 1.5rem 0 .8rem; }
-    .divider { height: 2px; background: #ddd; margin: 1rem 0; }
-    .papers .paper {
-      display: flex;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      overflow: hidden;
-      background: #fff;
-    }
-    .paper img.thumb { width: var(--thumb-size); height: var(--thumb-size); object-fit: cover; }
-    .paper-content {
-      padding: .8rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .paper-content a { color: var(--accent); font-weight: 600; text-decoration: none; margin-bottom: .3rem; }
-    .paper-content a:hover { text-decoration: underline; }
-    .paper-content p { font-size: .9rem; color: #555; }
-    #cv embed { width: 100%; height: 800px; border: 1px solid #ccc; border-radius: 4px; }
-    #cv .download-btn {
-      display: inline-block;
-      margin-top: .8rem;
-      padding: .6rem 1.2rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    #cv .download-btn:hover { background: #004931; }
-    /* Mobile layout */
-    @media (max-width: 768px) {
-      .sidebar { position: static; width: 100%; margin-bottom: var(--gap); }
-      .main { width: 100%; padding: var(--gap) 1rem; }
-    }
-  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=WDXL+Lubrifont+JP+N&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <aside class="sidebar">
-    <img class="profile" src="images/photos/photo.jpg" alt="Danila Shiryaev">
+    <img
+      class="profile"
+      src="images/photos/photo.jpg"
+      alt="Danila Shiryaev"
+    />
     <h1>Danila Shiryaev</h1>
-    <p>PhD Student<br>Institut Polytechnique of Paris</p>
+    <p>
+      PhD Student<br />
+      Institut Polytechnique of Paris
+    </p>
+
     <div class="social-links">
-      <a href="https://github.com/dshirya" target="_blank"><img src="images/icons/github.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/danila-shiryaev-66ab94227/" target="_blank"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
-      <a href="mailto:dshirya@gmail.com"><img src="images/icons/email.png" alt="Email"></a>
-      <a href="https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en" target="_blank"><img src="images/icons/scholar.png" alt="Google Scholar"></a>
+      <a
+        href="https://github.com/dshirya"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="images/icons/github.png" alt="GitHub" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/danila-shiryaev-66ab94227/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="images/icons/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="mailto:dshirya@gmail.com">
+        <img src="images/icons/email.png" alt="Email" />
+      </a>
+      <a
+        href="https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="images/icons/scholar.png" alt="Google Scholar" />
+      </a>
     </div>
   </aside>
+
   <main class="main">
     <section id="about">
       <h2>About Me</h2>
-      <p><strong>Education:</strong> I graduated from <a href="https://hunter.cuny.edu/" target="_blank">Hunter College</a> in December 2024 with a B.A. in Chemistry. 
-      Before that, I studied at <a href="https://www.chem.msu.ru/eng/" target="_blank">Moscow State University</a>, where I worked in radiochemistry and materials science labs.</p>
-      <p><strong>Current path:</strong> I’ll start the <a href="https://www.ip-paris.fr/en/education/phd-track/phd-track-advanced-materials" target="_blank">PhD-Track Program in Advanced Materials</a> at Institut Polytechnique de Paris in Fall 2025.</p>
-      <p><strong>Research passions:</strong> I’m into solid-state chemistry, data analysis, and building predictive models.</p>
-      <p><strong>Outside the lab:</strong> You’ll find me hiking, cooking, or going for a run.</p>
+      <p>
+        <strong>Education:</strong> I graduated from
+        <a
+          href="https://hunter.cuny.edu/"
+          target="_blank"
+          rel="noopener"
+          >Hunter College</a
+        >
+        in Dec 2024 with a B.A. in Chemistry. Before that, I studied at
+        <a
+          href="https://www.chem.msu.ru/eng/"
+          target="_blank"
+          rel="noopener"
+          >Moscow State University</a
+        >, where I worked in radiochemistry and materials science labs.
+      </p>
+      <p>
+        <strong>Current path:</strong> I’ll start the
+        <a
+          href="https://www.ip-paris.fr/en/education/phd-track/phd-track-advanced-materials"
+          target="_blank"
+          rel="noopener"
+          >PhD-Track Program in Advanced Materials</a
+        >
+        at Institut Polytechnique de Paris in Fall 2025.
+      </p>
+      <p>
+        <strong>Research passions:</strong> I’m into solid-state chemistry,
+        data analysis, and building predictive models.
+      </p>
+      <p>
+        <strong>Outside the lab:</strong> You’ll find me hiking, cooking, or
+        going for a run.
+      </p>
     </section>
+
     <div class="divider"></div>
+
     <section id="research">
       <h2>Research</h2>
-      <p>I started my career as a radiochemist, synthesizing high-oxidation iron compounds for water treatment. Next, I worked with tritium-labeled compounds to study interactions at liquid–liquid interfaces. 
-        Under <a href="https://oliynyklab.github.io" target="_blank">Dr. Anton Oliynyk</a>, I dove into intermetallics-functional materials that power superconductors and thermoelectrics.</p>
-      <ul style="margin: 1rem 0 1rem 2rem;">
-        <p><strong>Computational approaches I use:</strong></p>
-      <ul style="margin: 1rem 0 1rem 2rem;">
-        <li>Machine-learning classification to predict and systematize crystal structures</li>
+      <p>
+        I started my career as a radiochemist, synthesizing high-oxidation iron
+        compounds for water treatment. Next, I worked with tritium-labeled
+        compounds to study interactions at liquid–liquid interfaces. Under
+        <a
+          href="https://oliynyklab.github.io"
+          target="_blank"
+          rel="noopener"
+          >Dr. Anton Oliynyk</a
+        >, I dove into intermetallics–functional materials that power
+        superconductors and thermoelectrics.
+      </p>
+      
+      <ul class="list-indent"></ul>
+      <p><strong>Computational approaches I use:</strong></p>
+      <ul class="list-indent">
+        <li>
+          Machine-learning classification to predict and systematize crystal
+          structures
+        </li>
         <li>Regression models to predict properties of solid compositions</li>
-        <li>Featurization pipelines that turn chemical and structural data into clear descriptors</li>
-        <li>High-throughput screening with a custom recommendation engine for novel compositions</li>
-        <li>Data analysis to spot trends in crystal structure formation</li>
+        <li>
+          Featurization pipelines that turn chemical and structural data into
+          clear descriptors
+        </li>
+        <li>
+          High-throughput screening with a custom recommendation engine for
+          novel compositions
+        </li>
+        <li>
+          Data analysis to spot trends in crystal structure formation
+        </li>
       </ul>
+
       <p><strong>Experimental methods I employ:</strong></p>
-      <ul style="margin: 1rem 0 1rem 2rem;">
+      <ul class="list-indent">
         <li>Synthesis by sintering, arc-melting, and metal-flux growth</li>
         <li>Powder and single-crystal XRD for structure determination</li>
         <li>SEM-EDS to confirm composition</li>
-        <li>Electronic structure calculations to probe chemical bonding</li>
-        <li>Mechanical testing: compressive strength, hardness, and resonant ultrasound spectroscopy</li>
+        <li>
+          Electronic structure calculations to probe chemical bonding
+        </li>
+        <li>
+          Mechanical testing: compressive strength, hardness, and resonant
+          ultrasound spectroscopy
+        </li>
       </ul>
     </section>
+
     <div class="divider"></div>
+
     <section id="papers">
       <h2>Selected Papers</h2>
+
       <div class="papers">
-        <div class="paper">
-          <img class="thumb" src="images/papers/DiB.png" alt="Dataset of Prototype Structures">
+        <article class="paper">
+          <img
+            class="thumb"
+            src="images/papers/DiB.png"
+            alt="Dataset of Prototype Structures"
+          />
           <div class="paper-content">
-            <a href="https://doi.org/10.26434/chemrxiv-2025-smpsh" target="_blank">Dataset of Prototype Structures Adopted by Intermetallic Compounds with AB Stacking</a>
+            <a
+              href="https://doi.org/10.26434/chemrxiv-2025-smpsh"
+              target="_blank"
+              rel="noopener"
+              >Dataset of Prototype Structures Adopted by Intermetallic
+              Compounds with AB Stacking</a
+            >
             <p>pre-print 2025</p>
           </div>
-        </div>
-        <div class="paper">
-          <img class="thumb" src="images/papers/JCE.png" alt="PCA and PLS-DA Clustering">
+        </article>
+
+        <article class="paper">
+          <img
+            class="thumb"
+            src="images/papers/JCE.png"
+            alt="PCA and PLS-DA Clustering"
+          />
           <div class="paper-content">
-            <a href="https://doi.org/10.26434/chemrxiv-2025-235nn" target="_blank">Exploring Feature Engineering for Crystal Structure Classification: Interactive Applications of PCA and PLS-DA Clustering</a>
+            <a
+              href="https://doi.org/10.26434/chemrxiv-2025-235nn"
+              target="_blank"
+              rel="noopener"
+              >Exploring Feature Engineering for Crystal Structure
+              Classification: Interactive Applications of PCA and PLS-DA
+              Clustering</a
+            >
             <p>pre-print 2025</p>
           </div>
-        </div>
-        <div class="paper">
-          <img class="thumb" src="images/papers/JACS.png" alt="TbIr3 Synthesis">
+        </article>
+
+        <article class="paper">
+          <img
+            class="thumb"
+            src="images/papers/JACS.png"
+            alt="TbIr3 Synthesis"
+          />
           <div class="paper-content">
-            <a href="https://doi.org/10.1021/jacs.5c03510" target="_blank">Unsupervised Machine Learning Prediction of a Novel 1:3 Intermetallic Phase with the Synthesis of TbIr3</a>
+            <a
+              href="https://doi.org/10.1021/jacs.5c03510"
+              target="_blank"
+              rel="noopener"
+              >Unsupervised Machine Learning Prediction of a Novel 1:3
+              Intermetallic Phase with the Synthesis of TbIr3</a
+            >
             <p>Journal of American Chemical Society 2025</p>
           </div>
-        </div>
-        <div class="paper">
-          <img class="thumb" src="images/papers/DD.png" alt="Composition and Structure Analyzer">
+        </article>
+
+        <article class="paper">
+          <img
+            class="thumb"
+            src="images/papers/DD.png"
+            alt="Composition and Structure Analyzer"
+          />
           <div class="paper-content">
-            <a href="https://doi.org/10.1039/D4DD00332B" target="_blank">Composition and Structure Analyzer/Featurizer for Explainable ML Models to Predict Solid State Structures</a>
+            <a
+              href="https://doi.org/10.1039/D4DD00332B"
+              target="_blank"
+              rel="noopener"
+              >Composition and Structure Analyzer/Featurizer for Explainable
+              ML Models to Predict Solid State Structures</a
+            >
             <p>Digital Discovery 2025</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
+
     <div class="divider"></div>
+
     <section id="cv">
       <h2>CV</h2>
-      <a href="docs/CV.pdf" download class="download-btn">Download CV (PDF)</a>
-      <embed src="docs/CV.pdf" type="application/pdf">
+      <a href="docs/CV.pdf" download class="download-btn"
+        >Download CV (PDF)</a
+      >
+      <embed src="docs/CV.pdf" type="application/pdf" />
     </section>
   </main>
 </body>
