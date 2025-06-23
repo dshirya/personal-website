@@ -12,7 +12,8 @@
   --sidebar-w: 350px;
   --profile-size: 230px;
   --icon-size: 32px;
-  --thumb-size: 150px;
+  --paper-height: 150px;
+  --paper-width: 116px;
   --main-w: 700px;
   --gap: 2rem;
 }
@@ -124,13 +125,14 @@ h4 {
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
-  background: #fdfdfd;
+  background: #f8f8f8;
   flex-wrap: nowrap;
 }
 
 /* Thumbnail container for consistent image sizing and spacing */
 .thumb-container {
   height: 170px !important;
+  width: 131px !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -139,7 +141,8 @@ h4 {
 }
 
 .paper img.thumb {
-  height: var(--thumb-size);
+  height: var(--paper-height);
+  width: var(--paper-width);
   object-fit: cover;
   margin: 0.5rem;
   border-radius: 4px;
