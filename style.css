@@ -8,7 +8,7 @@
 :root {
   --accent: #005F3C;
   --text: #111111;
-  --bg: #e8e8e8;
+  --bg: #fafafa;
   --sidebar-w: 350px;
   --profile-size: 230px;
   --icon-size: 32px;
@@ -124,7 +124,7 @@ h4 {
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
-  background: #f0f0f0;
+  background: #fdfdfd;
   flex-wrap: nowrap;
 }
 
