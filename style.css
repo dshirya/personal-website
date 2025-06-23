@@ -8,7 +8,7 @@
 :root {
   --accent: #005F3C;
   --text: #111111;
-  --bg: #ffffff;
+  --bg: #e8e8e8;
   --sidebar-w: 350px;
   --profile-size: 230px;
   --icon-size: 32px;
@@ -124,13 +124,25 @@ h4 {
   border: 1px solid #ddd;
   border-radius: 6px;
   overflow: hidden;
-  background: #fff;
+  background: #f0f0f0;
+  flex-wrap: nowrap;
+}
+
+/* Thumbnail container for consistent image sizing and spacing */
+.thumb-container {
+  height: 170px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none !important;
+  box-sizing: content-box;
 }
 
 .paper img.thumb {
-  width: var(--thumb-size);
   height: var(--thumb-size);
   object-fit: cover;
+  margin: 0.5rem;
+  border-radius: 4px;
 }
 
 .paper-content {
