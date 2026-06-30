@@ -3,277 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Danila Shiryaev | PhD in Advanced Materials IP Paris</title>
-  
-  <!-- Favicon declarations -->
+
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <title>Danila Shiryaev | PhD in Advanced Materials, IP Paris</title>
+
   <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon" />
   <link rel="alternate icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-  <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=WDXL+Lubrifont+JP+N&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
-  
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
 
 <body>
-  <aside class="sidebar">
-    <img
-      class="profile"
-      src="images/photos/photo.jpg"
-      alt="Danila Shiryaev"
-    />
-    <h1>Danila Shiryaev</h1>
-    <p>
-      PhD Student<br />
-      Institut Polytechnique of Paris
-    </p>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar"></aside>
 
-    <div class="social-links">
-      <a
-        href="https://github.com/dshirya"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="images/icons/github.png" alt="GitHub" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/danila-shiryaev-66ab94227/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="images/icons/linkedin.png" alt="LinkedIn" />
-      </a>
-      <a href="mailto:dshirya@gmail.com">
-        <img src="images/icons/email.png" alt="Email" />
-      </a>
-      <a
-        href="https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="images/icons/scholar.png" alt="Google Scholar" />
-      </a>
-    </div>
-  </aside>
+    <main class="main">
+      <section id="about" class="section">
+        <h2>about me</h2>
+        <p>
+          <strong>Education:</strong> I graduated from
+          <a href="https://hunter.cuny.edu/" target="_blank" rel="noopener">Hunter College</a>
+          in Dec 2024 with a B.A. in Chemistry. Before that, I studied at
+          <a href="https://www.chem.msu.ru/eng/" target="_blank" rel="noopener">Moscow State University</a>,
+          where I worked in radiochemistry and materials science labs.
+        </p>
+        <p>
+          <strong>Current path:</strong> I started the
+          <a
+            href="https://www.ip-paris.fr/en/education/phd-track/phd-track-advanced-materials"
+            target="_blank"
+            rel="noopener"
+            >PhD-Track Program in Advanced Materials</a
+          >
+          at Institut Polytechnique de Paris in Fall 2025.
+        </p>
+        <p>
+          <strong>Research passions:</strong> I'm into solid-state chemistry,
+          data analysis, and building predictive models.
+        </p>
+        <p>
+          <strong>Outside the lab:</strong> You'll find me hiking, cooking, or
+          going for a run.
+        </p>
+      </section>
 
-  <main class="main">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        <strong>Education:</strong> I graduated from
-        <a
-          href="https://hunter.cuny.edu/"
-          target="_blank"
-          rel="noopener"
-          >Hunter College</a
-        >
-        in Dec 2024 with a B.A. in Chemistry. Before that, I studied at
-        <a
-          href="https://www.chem.msu.ru/eng/"
-          target="_blank"
-          rel="noopener"
-          >Moscow State University</a
-        >, where I worked in radiochemistry and materials science labs.
-      </p>
-      <p>
-        <strong>Current path:</strong> I have started the
-        <a
-          href="https://www.ip-paris.fr/en/education/phd-track/phd-track-advanced-materials"
-          target="_blank"
-          rel="noopener"
-          >PhD-Track Program in Advanced Materials</a
-        >
-        at Institut Polytechnique de Paris in Fall 2025.
-      </p>
-      <p>
-        <strong>Research passions:</strong> I'm into solid-state chemistry,
-        data analysis, and building predictive models.
-      </p>
-      <p>
-        <strong>Outside the lab:</strong> You'll find me hiking, cooking, or
-        going for a run.
-      </p>
-    </section>
+      <hr class="divider" />
 
-    <div class="divider"></div>
+      <section id="research" class="section">
+        <h2>research</h2>
+        <p>
+          I began as a radiochemist - synthesizing high-oxidation iron compounds
+          for water treatment and using tritium-labeled molecules to probe
+          liquid-liquid interfaces. Today I sit between computation and the lab,
+          building explainable models for solid-state materials and validating
+          them experimentally.
+        </p>
 
-    <section id="research">
-      <h2>Research</h2>
-      
-      <p>
-        I started my career as a radiochemist, synthesizing high-oxidation iron
-        compounds for water treatment. Next, I worked with tritium-labeled
-        compounds to study interactions at liquid-liquid interfaces. <p>
-          <h3> Hunter College (Bachelor)</h3>
-          <br>
-          <p> In
-        <a
-          href="https://oliynyklab.github.io"
-          target="_blank"
-          rel="noopener"
-          >Dr. Anton Oliynyk</a 
-        > group, I dove into intermetallics - functional materials known for their use in 
-        superconductors and thermoelectric applications. In this role, my main focus was on 
-        applying computational methods to streamline and speed up our research. 
-      </p>
+        <h3>Hunter College (Bachelor)</h3>
+        <p>
+          In
+          <a href="https://oliynyklab.github.io" target="_blank" rel="noopener">Dr. Anton Oliynyk</a>'s
+          group I worked on
+          <span class="concept-key" data-concept="intermetallics">intermetallics</span>
+          - functional materials behind superconductors and thermoelectrics -
+          using computation to accelerate discovery. I focus on keeping
+          <span class="concept-key" data-concept="ml">machine-learning models</span>
+          explainable rather than black boxes, so I can see how chemical and
+          structural features drive
+          <span class="concept-key" data-concept="crystal-structures">crystal structure</span>
+          formation, then confirm predictions experimentally.
+        </p>
 
-      <ul class="list-indent"></ul>
-      <p><strong>Computational approaches I use:</strong></p>
-      <ul class="list-indent">
-        <li>
-          Machine-learning classification to predict and systematize crystal
-          structures
-        </li>
-        <li>Regression models to predict properties of solid compositions</li>
-        <li>
-          Featurization pipelines that turn chemical and structural data into
-          clear descriptors
-        </li>
-        <li>
-          High-throughput screening with a custom recommendation engine for
-          novel compositions
-        </li>
-        <li>
-          Data analysis to spot trends in crystal structure formation
-        </li>
-      </ul>
-      <p>
-        My primary focus with machine learning models is ensuring they are explainable and interpretable. 
-        Instead of relying on "black box" approaches, I aim to clearly understand how chemical and structural features 
-        influence material properties. Additionally, I always verify my computational predictions through experimental validation.
-      </p>
-      </ul>
-      <br>
-      <h3> Intitut Polytechnique de Paris (Master)</h3>
-      <br>
-      <p>
-        Currently, at 
-        <a
-          href="https://pmc.polytechnique.fr/spip/spip.php?article1238&lang=fr"
-          target="_blank"
-          rel="noopener"
-        >Simon Delacroix's</a> 
-        group, I am working on laser treatment to synthesize or perform structure transitions of materials. I focuses on the synthesis and characterization of Eu-doped La–P–O phases across the La₂O₃–P₂O₅ phase diagram, the study of inter-diffusion between LaPO₄ and EuPO₄ under 
-        laser treatment, and the laser-induced rhabdophane–to–monazite transition in LaPO₄:Eu nanoparticles.
-      </p>
-      <ul class="list-indent"></ul>
-      <p><strong>Experimental methods I employ:</strong></p>
-      <ul class="list-indent">
-        <li>Synthesis by sintering, arc-melting, and metal-flux growth</li>
-        <li>Laser treatment of materials</li>
-        <li>Powder and single-crystal XRD for structure determination</li>
-        <li>SEM-EDS to confirm composition</li>
-        <li>Luminescence spectroscopy</li>
-        <li>
-          Electronic structure calculations to probe chemical bonding
-        </li>
-        <li>
-          Mechanical testing: compressive strength, hardness, and resonant
-          ultrasound spectroscopy
-        </li>
-      </ul>
-    </section>
+        <h3>Institut Polytechnique de Paris (Master)</h3>
+        <p>
+          In
+          <a
+            href="https://pmc.polytechnique.fr/spip/spip.php?article1238&lang=fr"
+            target="_blank"
+            rel="noopener"
+            >Simon Delacroix's</a
+          >
+          group I use
+          <span class="concept-key" data-concept="laser-treatment">laser treatment</span>
+          to drive synthesis and structural transitions. I study Eu-doped
+          <span class="concept-key" data-concept="re-p-o">La-P-O phases</span>
+          across the La<sub>2</sub>O<sub>3</sub>-P<sub>2</sub>O<sub>5</sub> phase
+          diagram, inter-diffusion between LaPO<sub>4</sub> and EuPO<sub>4</sub>,
+          and the laser-induced rhabdophane-to-monazite transition in
+          <span class="concept-key" data-concept="re-p-o">LaPO<sub>4</sub>:Eu</span>
+          nanoparticles.
+        </p>
+        <p class="chips-label">computational approaches</p>
+        <div class="chips">
+          <button type="button" class="chip" data-concept="ml">machine learning</button>
+          <button type="button" class="chip" data-concept="featurization">featurization</button>
+          <button type="button" class="chip" data-concept="screening">high-throughput screening</button>
+          <button type="button" class="chip" data-concept="recommender">recommendation engine</button>
+          <button type="button" class="chip" data-concept="data-processing">data processing</button>
+        </div>
+        <p class="chips-label">experimental methods</p>
+        <div class="chips">
+          <button type="button" class="chip" data-concept="sintering">sintering</button>
+          <button type="button" class="chip" data-concept="arc-melting">arc-melting</button>
+          <button type="button" class="chip" data-concept="laser-treatment">laser treatment</button>
+          <button type="button" class="chip" data-concept="xrd">XRD</button>
+          <button type="button" class="chip" data-concept="sem-eds">SEM-EDS</button>
+          <button type="button" class="chip" data-concept="luminescence">luminescence spectroscopy</button>
+          <button type="button" class="chip" data-concept="mechanical-testing">mechanical testing</button>
+        </div>
 
-    <div class="divider"></div>
+        <figure class="research-map">
+          <div id="concept-graph" role="img"
+            aria-label="Interactive graph linking my computational, experimental, and materials research approaches."></div>
+          <ul class="graph-legend" aria-hidden="true">
+            <li><span class="dot dot--computational"></span>computational</li>
+            <li><span class="dot dot--experimental"></span>experimental</li>
+            <li><span class="dot dot--materials"></span>materials</li>
+          </ul>
+        </figure>
+      </section>
 
-    <section id="papers">
-      <h2>Selected Papers</h2>
+      <hr class="divider" />
 
-      <div class="papers">
-        <article class="paper">
-          <img
-            class="thumb"
-            src="images/papers/JCE1.png"
-            alt="PCA and PLS-DA Clustering"
-          />
-          <div class="paper-content">
-            <a
-              href="https://doi.org/10.26434/chemrxiv-2025-235nn"
-              target="_blank"
-              rel="noopener"
-              >Exploring Feature Engineering for Crystal Structure
-              Classification: Interactive Applications of PCA and PLS-DA
-              Clustering</a
-            >
-            <p>Journal of Chemical Education 2025</p>
-          </div>
-        </article>
+      <section id="cv" class="section">
+        <h2>cv</h2>
+        <a href="docs/CV.pdf" download class="btn">Download CV (PDF)</a>
+        <embed class="cv-embed" src="docs/CV.pdf" type="application/pdf" />
+      </section>
+    </main>
+  </div>
 
-        <article class="paper">
-          <img
-            class="thumb"
-            src="images/papers/JACS.png"
-            alt="TbIr3 Synthesis"
-          />
-          <div class="paper-content">
-            <a
-              href="https://doi.org/10.1021/jacs.5c03510"
-              target="_blank"
-              rel="noopener"
-              >Unsupervised Machine Learning Prediction of a Novel 1:3 
-              Intermetallic Phase with the Synthesis of TbIr<sub>3</sub></a
-            >
-            <p>Journal of American Chemical Society 2025</p>
-          </div>
-        </article>
-
-        <article class="paper">
-          <img
-            class="thumb"
-            src="images/papers/DD.png"
-            alt="Composition and Structure Analyzer"
-          />
-          <div class="paper-content">
-            <a
-              href="https://doi.org/10.1039/D4DD00332B"
-              target="_blank"
-              rel="noopener"
-              >Composition and Structure Analyzer/Featurizer for Explainable
-              ML Models to Predict Solid State Structures</a
-            >
-            <p>Digital Discovery 2025</p>
-          </div>
-        </article>
-
-        <article class="paper">
-          <img
-            class="thumb"
-            src="images/papers/DiB.png"
-            alt="Dataset of Prototype Structures"
-          />
-          <div class="paper-content">
-            <a
-              href="https://doi.org/10.26434/chemrxiv-2025-smpsh"
-              target="_blank"
-              rel="noopener"
-              >Dataset of Prototype Structures Adopted by Intermetallic
-              Compounds with AB Stacking</a
-            >
-            <p>Data in Brief 2025</p>
-          </div>
-        </article>
-        
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section id="cv">
-      <h2>CV</h2>
-      <a href="docs/CV.pdf" download class="download-btn"
-        >Download CV (PDF)</a
-      >
-      <embed src="docs/CV.pdf" type="application/pdf" />
-    </section>
-  </main>
+  <script src="js/site.js"></script>
+  <script src="https://unpkg.com/force-graph"></script>
+  <script src="data/concepts.js"></script>
+  <script src="js/concept-graph.js"></script>
 </body>
 </html>

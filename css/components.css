@@ -1,0 +1,362 @@
+/* ---------- Sidebar profile ---------- */
+.profile {
+  width: var(--profile-size);
+  height: var(--profile-size);
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+  margin: 0 auto var(--space-4);
+}
+
+.sidebar h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.sidebar .subtitle {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Social links ---------- */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.social-links a img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.social-links a:hover img {
+  opacity: 0.65;
+  transform: translateY(-2px);
+}
+
+/* ---------- Navigation (top bar) ---------- */
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav a {
+  display: block;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.site-nav a:hover {
+  background: var(--color-surface);
+  text-decoration: none;
+}
+
+.site-nav a.active {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+/* ---------- Theme toggle ---------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-strong);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Light theme shows the moon (switch to dark); dark theme shows the sun. */
+.theme-toggle .icon-sun {
+  display: none;
+}
+.theme-toggle .icon-moon {
+  display: block;
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+/* ---------- Lists ---------- */
+.list-indent {
+  margin: var(--space-3) 0 var(--space-3) var(--space-5);
+}
+
+.list-indent li {
+  position: relative;
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+
+.list-indent li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* ---------- Paper cards ---------- */
+.papers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.paper {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.paper:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.paper img.thumb {
+  height: var(--paper-thumb-h);
+  width: var(--paper-thumb-w);
+  object-fit: cover;
+  margin: var(--space-2);
+  border-radius: var(--radius-sm);
+  flex: none;
+}
+
+.paper-content {
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paper-content a {
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.paper-content .venue {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: var(--space-2) var(--space-5);
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.btn:hover {
+  background: var(--color-accent-strong);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---------- CV embed ---------- */
+.cv-embed {
+  width: 100%;
+  height: 800px;
+  margin-top: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* ---------- Research map (concept graph) ---------- */
+.research-map {
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+#concept-graph {
+  width: 100%;
+  height: 480px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 1px 1px, var(--color-surface-strong) 1px, transparent 0)
+    0 0 / 22px 22px,
+    var(--color-bg);
+  overflow: hidden;
+}
+
+.graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.graph-legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.graph-legend .dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot--computational { background: var(--group-computational); }
+.dot--experimental { background: var(--group-experimental); }
+.dot--materials { background: var(--group-materials); }
+
+/* ---------- Tag chips ---------- */
+.chips-label {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.chip {
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition),
+    color var(--transition), opacity var(--transition), transform var(--transition);
+}
+
+.chip:hover,
+.chip:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent-strong);
+  outline: none;
+}
+
+.chip.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.chip.is-related {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+.chip.concept-dim {
+  opacity: 0.4;
+}
+
+/* ---------- Inline concept keywords ---------- */
+.concept-key {
+  font-weight: 500;
+  color: var(--color-accent-strong);
+  border-bottom: 1px dashed var(--color-accent);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.concept-key:hover,
+.concept-key.is-active {
+  background: var(--color-accent-soft);
+}
+
+.concept-key.concept-dim {
+  opacity: 0.5;
+}
+
+/* ---------- Projects placeholder ---------- */
+.viz-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 320px;
+  margin-top: var(--space-4);
+  padding: var(--space-6);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+@media (max-width: 600px) {
+  /* Phones: drop the photo and let text + icons fill the full width. */
+  .profile {
+    display: none;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .social-links {
+    justify-content: space-around;
+    gap: var(--space-3);
+  }
+  .paper {
+    flex-direction: column;
+  }
+  .paper img.thumb {
+    width: 100%;
+    height: 180px;
+  }
+  .cv-embed {
+    height: 500px;
+  }
+  #concept-graph {
+    height: 320px;
+  }
+}
