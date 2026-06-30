@@ -32,7 +32,11 @@
 .social-links a img {
   width: var(--icon-size);
   height: var(--icon-size);
-  transition: opacity var(--transition), transform var(--transition);
+  transition: opacity var(--transition), transform var(--transition), filter var(--transition);
+}
+
+:root[data-theme="dark"] .social-links a img {
+  filter: brightness(0) invert(1);
 }
 
 .social-links a:hover img {

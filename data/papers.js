@@ -2,6 +2,18 @@
 // `titleHtml` allows inline markup (e.g. subscripts); fall back to plain text otherwise.
 const PAPERS = [
   {
+    title: "Achieving a Scalable Machine Learning Workflow for Crystal Structure Discovery with Experimental Validation",
+    venue: "Digital Discovery 2026",
+    href: "https://doi.org/10.1039/D6DD00132G",
+    thumb: "images/papers/DD-2.png",
+  },
+  {
+    titleHtml: "Explainable Recommendation Engines to Predict Complex Intermetallics: Synthesis and Characterization of Gd<sub>10</sub>RuCd<sub>3</sub>, a Neutron Absorption Material",
+    venue: "Journal of the American Chemical Society 2025",
+    href: "https://doi.org/10.1021/jacs.5c11646",
+    thumb: "images/papers/JACS-2.png",
+  },
+  {
     title: "Exploring Feature Engineering for Crystal Structure Classification: Interactive Applications of PCA and PLS-DA Clustering",
     venue: "Journal of Chemical Education 2025",
     href: "https://doi.org/10.26434/chemrxiv-2025-235nn",
