@@ -84,8 +84,38 @@
   :root {
     --gap: 1.25rem;
   }
+  /* Left-align the nav so three links never run under the theme toggle. */
+  .topbar {
+    justify-content: flex-start;
+  }
+  .site-nav {
+    gap: var(--space-1);
+  }
+  .site-nav a {
+    padding: var(--space-1) var(--space-3);
+    white-space: nowrap;
+  }
   .main {
     padding-left: var(--space-4);
     padding-right: var(--space-4);
+  }
+}
+
+/* Small phones: "periodic table" must still clear the theme toggle. */
+@media (max-width: 400px) {
+  .topbar {
+    padding-left: var(--space-2);
+  }
+  .topbar .theme-toggle {
+    right: var(--space-2);
+    width: 34px;
+    height: 34px;
+  }
+  .site-nav {
+    gap: 2px;
+  }
+  .site-nav a {
+    padding: var(--space-1) 6px;
+    font-size: var(--text-sm);
   }
 }

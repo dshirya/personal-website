@@ -1,0 +1,90 @@
+﻿column,key,label,unit,category,scale,description,source
+Atomic weight,atomic_weight,Atomic weight,u,Basics,linear,,
+Atomic number,atomic_number,Atomic number,,Basics,linear,,
+Period,period,Period,,Basics,linear,,
+Group,group,Group,,Basics,linear,Lanthanides and actinides are listed as group 3.,
+quantum  number l,quantum_l,Orbital quantum number l,,Basics,category,"0 = s, 1 = p, 2 = d, 3 = f block.",
+Metal(1)/ metalloid(2)/ nonmetal(3),metal_class,Metal / metalloid / nonmetal,,Basics,category,"1 = metal, 2 = metalloid, 3 = nonmetal.",
+Mendeleev number,mendeleev_number,Mendeleev number,,Chemical scales,linear,Pettifor-style chemical scale used for structure maps.,
+Families,family_code,Family (lab grouping),,Basics,category,"1 alkali, 2 alkaline earth, 3 Sc/Y/lanthanides/actinides, 4 transition metals, 5 post-transition metals, 6 metalloids, 7 nonmetals, 8 halogens.",
+valence s,valence_s,Valence s electrons,,Electronic structure,linear,,
+valence p,valence_p,Valence p electrons,,Electronic structure,linear,,
+valence d,valence_d,Valence d electrons,,Electronic structure,linear,,
+valence f,valence_f,Valence f electrons,,Electronic structure,linear,,
+unfilled s,unfilled_s,Unfilled s states,,Electronic structure,linear,,
+unfilled p,unfilled_p,Unfilled p states,,Electronic structure,linear,,
+unfilled d,unfilled_d,Unfilled d states,,Electronic structure,linear,,
+unfilled f,unfilled_f,Unfilled f states,,Electronic structure,linear,,
+no. of  valence  electrons,valence_electrons,Valence electrons,,Electronic structure,linear,,
+outer shell electrons,outer_shell_electrons,Outer-shell electrons,,Electronic structure,linear,,
+Gilman no. of valence electrons,gilman_valence,Gilman valence electrons,,Electronic structure,linear,,
+"Pauling valence,  v",pauling_valence,Pauling valence,,Electronic structure,linear,,
+Metallic  valence,metallic_valence,Metallic valence,,Electronic structure,linear,,
+Zeff,zeff,Effective nuclear charge,,Electronic structure,linear,,
+1st Bohr radius (a0),bohr_radius,First Bohr radius,a₀,Electronic structure,linear,,
+Ionization energy (eV),ionization_energy,First ionization energy,eV,Ionization & affinity,linear,,
+Electron affinity (ev),electron_affinity,Electron affinity,eV,Ionization & affinity,linear,Negative values: the anion is unbound.,
+Pearson absolute (eV),pearson_absolute_en,Pearson absolute electronegativity,eV,Electronegativity,linear,,
+Ghosh Gupta (eV),ghosh_gupta_en,Ghosh–Gupta electronegativity,eV,Electronegativity,linear,,
+Pauling EN,pauling_en,Pauling electronegativity,,Electronegativity,linear,,
+Martynov Batsanov EN,martynov_batsanov_en,Martynov–Batsanov electronegativity,,Electronegativity,linear,,
+Mulliken EN,mulliken_en,Mulliken electronegativity,eV,Electronegativity,linear,,
+Allred EN,allred_en,Allred electronegativity,,Electronegativity,linear,,
+Allred Rockow EN,allred_rochow_en,Allred–Rochow electronegativity,,Electronegativity,linear,,
+Nagle EN,nagle_en,Nagle electronegativity,,Electronegativity,linear,,
+Putz Russo Sicillia EN,putz_russo_sicilia_en,Putz–Russo–Sicilia electronegativity,,Electronegativity,linear,,
+Gordy EN,gordy_en,Gordy electronegativity,,Electronegativity,linear,,
+Ghosh EN,ghosh_en,Ghosh electronegativity,,Electronegativity,log,"Rises steeply across the 5d row, hence the log scale.",
+Atomic radius calculated,atomic_radius_calc,Atomic radius (calculated),Å,Radii,linear,,
+Covalent radius,covalent_radius,Covalent radius,Å,Radii,linear,,
+Ionic radius,ionic_radius,Ionic radius,Å,Radii,linear,,
+Effective ionic radius,effective_ionic_radius,Effective ionic radius,Å,Radii,linear,,
+Miracle radius,miracle_radius,Miracle radius,Å,Radii,linear,Radii for metallic glasses (Miracle et al.).,
+van der Waals radius,vdw_radius,van der Waals radius,Å,Radii,linear,,
+Zunger radii sum,zunger_radii_sum,Zunger pseudopotential radii sum,a.u.,Radii,linear,,
+Crystal radius,crystal_radius,Crystal radius,Å,Radii,linear,,
+Covalent CSD radius,covalent_csd_radius,"Covalent radius (CSD, Cordero)",Å,Radii,linear,,
+Slater radius,slater_radius,Slater radius,Å,Radii,linear,,
+Orbital radius,orbital_radius,Orbital radius,Å,Radii,linear,,
+"Pauling, R(CN12)",pauling_r_cn12,Pauling metallic radius R(CN12),Å,Radii,linear,,
+"Pauling, R(1)",pauling_r1,Pauling single-bond radius R(1),Å,Radii,linear,,
+"polarizability, A^3",polarizability,Polarizability,Å³,Electronic structure,log,,
+"Melting point, K",melting_point,Melting point,K,Thermal & physical,linear,,
+"Boiling point, K",boiling_point,Boiling point,K,Thermal & physical,linear,,
+"Density,  g/mL",density,Density,g/cm³,Thermal & physical,linear,,
+"Specific heat, J/g K",specific_heat,Specific heat,J g⁻¹ K⁻¹,Thermal & physical,linear,,
+"Heat of fusion,  kJ/mol",heat_of_fusion,Heat of fusion,kJ/mol,Thermal & physical,log,,
+"Heat of vaporization,  kJ/mol",heat_of_vaporization,Heat of vaporization,kJ/mol,Thermal & physical,log,,
+"Heat of atomization,  kJ/mol",heat_of_atomization,Heat of atomization,kJ/mol,Thermal & physical,linear,,
+"Thermal conductivity, W/m K",thermal_conductivity,Thermal conductivity,W m⁻¹ K⁻¹,Thermal & physical,log,,
+"Thermal expansion,  K^-1",thermal_expansion,Thermal expansion coefficient,K⁻¹,Thermal & physical,log,,
+Cohesive  energy,cohesive_energy,Cohesive energy,eV/atom,Thermal & physical,linear,,
+"Bulk modulus, GPa",bulk_modulus,Bulk modulus,GPa,Mechanical,log,,
+"Sheer modulus, GPa",shear_modulus,Shear modulus,GPa,Mechanical,log,,
+"Young modulus, GPa",young_modulus,Young's modulus,GPa,Mechanical,log,,
+"Hardness Vickers, GPa",vickers_hardness,Vickers hardness,GPa,Mechanical,log,,
+"Hardness Brinell, GPa",brinell_hardness,Brinell hardness,GPa,Mechanical,log,,
+Resistivity (mΩ),resistivity,Electrical resistivity,Ω·m,Electrical,log,"Header says mΩ, but the values are in Ω·m (Ag = 1.6e-8).",
+Electrical Conductivity  (S/m),electrical_conductivity,Electrical conductivity,S/m,Electrical,log,,
+DFT LDA Etot,dft_lda_etot,LDA total energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom total energy in the LDA approximation.,NIST SRD 141
+DFT LDA Ekin,dft_lda_ekin,LDA kinetic energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom kinetic energy in the LDA approximation.,NIST SRD 141
+DFT LDA Ecoul,dft_lda_ecoul,LDA electron–electron energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–electron energy in the LDA approximation.,NIST SRD 141
+DFT LDA Eenuc,dft_lda_eenuc,LDA electron–nucleus energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–nucleus energy in the LDA approximation.,NIST SRD 141
+DFT LDA Exc,dft_lda_exc,LDA exchange–correlation energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom exchange–correlation energy in the LDA approximation.,NIST SRD 141
+DFT LSD Etot,dft_lsd_etot,LSD total energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom total energy in the spin-polarized LSD approximation.,NIST SRD 141
+DFT LSD Ekin,dft_lsd_ekin,LSD kinetic energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom kinetic energy in the spin-polarized LSD approximation.,NIST SRD 141
+DFT LSD Ecoul,dft_lsd_ecoul,LSD electron–electron energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–electron energy in the spin-polarized LSD approximation.,NIST SRD 141
+DFT LSD Eenuc,dft_lsd_eenuc,LSD electron–nucleus energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–nucleus energy in the spin-polarized LSD approximation.,NIST SRD 141
+DFT LSD Exc,dft_lsd_exc,LSD exchange–correlation energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom exchange–correlation energy in the spin-polarized LSD approximation.,NIST SRD 141
+DFT RLDA Etot,dft_rlda_etot,RLDA total energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom total energy in the relativistic RLDA approximation.,NIST SRD 141
+DFT RLDA Ekin,dft_rlda_ekin,RLDA kinetic energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom kinetic energy in the relativistic RLDA approximation.,NIST SRD 141
+DFT RLDA Ecoul,dft_rlda_ecoul,RLDA electron–electron energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–electron energy in the relativistic RLDA approximation.,NIST SRD 141
+DFT RLDA Eenuc,dft_rlda_eenuc,RLDA electron–nucleus energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–nucleus energy in the relativistic RLDA approximation.,NIST SRD 141
+DFT RLDA Exc,dft_rlda_exc,RLDA exchange–correlation energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom exchange–correlation energy in the relativistic RLDA approximation.,NIST SRD 141
+DFT ScRLDA Etot,dft_scrlda_etot,ScRLDA total energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom total energy in the scalar-relativistic ScRLDA approximation.,NIST SRD 141
+DFT ScRLDA Ekin,dft_scrlda_ekin,ScRLDA kinetic energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom kinetic energy in the scalar-relativistic ScRLDA approximation.,NIST SRD 141
+DFT ScRLDA Ecoul,dft_scrlda_ecoul,ScRLDA electron–electron energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–electron energy in the scalar-relativistic ScRLDA approximation.,NIST SRD 141
+DFT ScRLDA Eenuc,dft_scrlda_eenuc,ScRLDA electron–nucleus energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom electron–nucleus energy in the scalar-relativistic ScRLDA approximation.,NIST SRD 141
+DFT ScRLDA Exc,dft_scrlda_exc,ScRLDA exchange–correlation energy,Ha,"DFT (free atom, NIST SRD 141)",symlog,Free-atom exchange–correlation energy in the scalar-relativistic ScRLDA approximation.,NIST SRD 141
+Neutron  Cross  Section ,neutron_cross_section,Thermal neutron capture cross-section,barn,Nuclear,log,How strongly the element swallows slow neutrons. Gd is the champion.,
+Neutron  Mass  Absorption,neutron_mass_absorption,Neutron mass absorption,,Nuclear,log,,
