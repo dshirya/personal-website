@@ -101,6 +101,8 @@
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
+  // Phones/tablets: the graph must not capture swipes meant to scroll the page.
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
 
   const Graph = ForceGraph()(container)
     .graphData({ nodes, links })
@@ -173,6 +175,14 @@
       syncChips();
     });
 
+  // Taps still highlight nodes; pan/zoom/drag stay desktop-only (see the
+  // matching touch-action override in css/components.css).
+  if (isTouch) {
+    Graph.enableZoomInteraction(false)
+      .enablePanInteraction(false)
+      .enableNodeDrag(false);
+  }
+
   // Spread nodes out so the larger labels stay readable.
   if (Graph.d3Force("charge")) Graph.d3Force("charge").strength(-320);
   if (Graph.d3Force("link")) Graph.d3Force("link").distance(95);
@@ -216,7 +226,8 @@
     chip.addEventListener("click", () => {
       togglePin(id);
       const node = nodes.find((n) => n.id === id);
-      if (node && typeof node.x === "number") {
+      // No zoom on touch: without pinch/pan the user couldn't zoom back out.
+      if (!isTouch && node && typeof node.x === "number") {
         Graph.centerAt(node.x, node.y, 500);
         Graph.zoom(2.2, 500);
       }

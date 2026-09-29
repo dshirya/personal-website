@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Python tooling for scripts/
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Full-size image originals; scripts/optimize_images.py writes the web versions
+images/_src/

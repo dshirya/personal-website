@@ -1,7 +1,7 @@
 // Shared sidebar + top navigation, rendered on every page.
 const PROFILE = {
   name: "Danila Shiryaev",
-  photo: "images/photos/photo.jpg",
+  photo: "images/photos/photo.webp",
   role: "M2 Student",
   affiliation: "Institut Polytechnique de Paris",
 };
@@ -13,9 +13,11 @@ const SOCIAL_LINKS = [
   { href: "https://scholar.google.com/citations?user=dIWlvCsAAAAJ&hl=en", label: "Google Scholar", icon: "images/icons/scholar.png" },
 ];
 
+// `short`: label for small phones, where the full one won't fit beside the theme toggle.
 const NAV_LINKS = [
   { href: "index.html", label: "home" },
   { href: "papers.html", label: "papers" },
+  { href: "periodic-table.html", label: "periodic table", short: "elements" },
 ];
 
 function currentPage() {
@@ -49,7 +51,11 @@ function renderTopbar() {
   const active = currentPage();
   const nav = NAV_LINKS.map(
     (n) =>
-      `<a href="${n.href}"${n.href === active ? ' class="active" aria-current="page"' : ""}>${n.label}</a>`
+      `<a href="${n.href}"${n.href === active ? ' class="active" aria-current="page"' : ""}>${
+        n.short
+          ? `<span class="nav-long">${n.label}</span><span class="nav-short">${n.short}</span>`
+          : n.label
+      }</a>`
   ).join("");
 
   const header = document.createElement("header");

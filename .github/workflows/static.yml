@@ -31,6 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Check image sizes
+        run: |
+          big=$(find images -type f -size +500k)
+          if [ -n "$big" ]; then
+            echo "Images over 500 KB; run scripts/optimize_images.py:"; echo "$big"; exit 1
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
